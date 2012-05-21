@@ -10,6 +10,7 @@ package ru.devhead.jregenerate;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import com.google.common.base.CharMatcher;
 import java.util.Properties;
 
 public class Jregenerate extends javax.swing.JFrame {
@@ -83,7 +84,14 @@ public class Jregenerate extends javax.swing.JFrame {
 
     private void Button_regenerateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_regenerateActionPerformed
         
-        Text_Resul.setText(getRegenerate(Text_Resul.getText()));
+        String Password = getRegenerate(Text_Resul.getText());
+        boolean isAscii = CharMatcher.ASCII.matchesAllOf(Password);
+        if (isAscii==false){
+        Text_Resul.setText(Password);
+        }
+        else{
+           Text_Resul.setText(""); 
+        }
     }//GEN-LAST:event_Button_regenerateActionPerformed
 
     private void Clean_Text_ResulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Clean_Text_ResulActionPerformed
