@@ -7,10 +7,11 @@
  */
 package ru.devhead.jregenerate;
 
+
+import com.google.common.base.CharMatcher;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import com.google.common.base.CharMatcher;
 import java.util.Properties;
 
 public class Jregenerate extends javax.swing.JFrame {
@@ -155,7 +156,7 @@ public class Jregenerate extends javax.swing.JFrame {
 
         try{
             Properties p = new Properties();
-            p.load(new InputStreamReader(new FileInputStream("user.ini"),"UTF8"));
+            p.load(new InputStreamReader(new FileInputStream("db.ini"),"UTF8"));
             for (int n=str.length();n>0;n--){
                 obj_array.add(p.getProperty("'"+str.charAt(n-1)+"'"));
             }

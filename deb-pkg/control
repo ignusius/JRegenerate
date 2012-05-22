@@ -1,0 +1,8 @@
+Package: JRegenerate
+Version: 0.1.0
+Architecture: all
+Maintainer: Developers <ignusius@gmail.com>
+Original-Maintainer: Komarov Alexander
+Depends: openjdk-7-jre
+Installed-Size: 2000
+Description: This is Java program  implementation regenerate https://github.com/ignusius/regenerate
